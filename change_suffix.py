@@ -13,7 +13,7 @@ print (os.path.splitext('a_3.py'))---> ('a_3' '.py')
 
 import os 
 
-
+#路径到底要怎样输入？
 path="D:\Code\test\"
 file_list= os.listdir(path)
 for file in file_list:
