@@ -14,13 +14,15 @@ print (os.path.splitext('a_3.py'))---> ('a_3' '.py')
 import os 
 
 #路径到底要怎样输入？
-path="D:\Code\test\"
+path="D:\\Code\\test\\"
 file_list= os.listdir(path)
+print(file_list)
 for file in file_list:
     file_split = os.path.splitext(file)
+    print(file_split)
     if len(file_split)==2:
         #这里的'txt'备替换
-        if file_split[-1]== 'txt':
+        if file_split[-1]== '.doc':
             #这里的'Word'替换结果
-            newfile =file_split[0]+'word'
-            os.rename(file,newfile)
+            newfile =file_split[0]+'.txt'
+            os.rename(path+file,path+newfile)
